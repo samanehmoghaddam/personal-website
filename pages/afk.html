@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Away From the Keyboard (AFK) - Samaneh H. Moghaddam</title>
+  <link rel="stylesheet" href="../assets/css/style.css"/>
+  <style>
+    /* Light layout helpers compatible with your existing CSS */
+    .afk-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+    .afk-card { background: #fff; border-radius: 12px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .afk-card figure { margin: 0 0 10px 0; }
+    .afk-card img { width: 100%; height: auto; border-radius: 8px; display: block; }
+    .afk-note { font-size: 0.95rem; opacity: 0.9; }
+    @media (prefers-color-scheme: dark) {
+      .afk-card { background: #161616; color: #eee; box-shadow: none; border: 1px solid #2b2b2b; }
+    }
+  </style>
+</head>
+<body>
+  <aside class="sidebar">
+    <img src="../assets/images/myprofile.png" alt="Profile Picture" class="profile-pic">
+    <h1>Samaneh H. Moghaddam</h1>
+    <p><a href="mailto:samaneh.h.moghaddam@gmail.com">samaneh.h.moghaddam@gmail.com</a></p>
+    <p><a href="https://linkedin.com/in/samaneh-hosseini-moghaddam" target="_blank">LinkedIn</a> · <a href="https://github.com/samanehmoghaddam" target="_blank">GitHub</a></p>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="education.html">Education</a>
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="projects.html">Projects</a>
+      <a href="skills.html">Skills & Interests</a>
+      <a href="mentoring.html">Mentoring & Lectureship</a>
+      <a href="awards.html">Honors & Awards</a>
+      <a href="industry.html">Industry Experience</a>
+      <a href="resume.html">Resume / CV</a>
+      <a href="afk.html" aria-current="page">Away From the Keyboard</a>
+    </nav>
+  </aside>
+
+  <main>
+    <section>
+      <h2>Away From the Keyboard (AFK)</h2>
+      <p class="afk-note">When the models are training, I’m probably doing one of these…</p>
+
+      <div class="afk-grid">
+        <div class="afk-card">
+          <figure>
+            <img src="../assets/images/afk/boardgames.jpg" alt="Board games with family and friends">
+            <figcaption>Board games with family & friends</figcaption>
+          </figure>
+          <p>I’m a little addicted—in the healthy, strategy-brain way. From co-ops to crunchy Euros, I love the mix of logic, table talk, and lightweight chaos.</p>
+        </div>
+
+        <div class="afk-card">
+          <figure>
+            <img src="../assets/images/afk/vacation.jpg" alt="Vacation moments">
+            <figcaption>Vacations</figcaption>
+          </figure>
+          <p>Exploring new places, food, and stories—usually with a camera in hand. I recharge best when curiosity sets the itinerary.</p>
+        </div>
+
+        <div class="afk-card">
+          <figure>
+            <img src="../assets/images/afk/cycling.jpg" alt="Cycling">
+            <figcaption>Cycling</figcaption>
+          </figure>
+          <p>Two wheels, clear head. It’s my favorite way to get unstuck on a tricky idea and enjoy the ride between thoughts.</p>
+        </div>
+      </div>
+
+      <p class="afk-note" style="margin-top:12px;">I’ll keep adding photos as I go—small snapshots of life beyond GPUs and gradients.</p>
+    </section>
+  </main>
+
+  <script src="../assets/js/script.js"></script>
+</body>
+</html>
