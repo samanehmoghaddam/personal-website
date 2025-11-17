@@ -6,18 +6,38 @@
   <title>Away From the Keyboard (AFK) - Samaneh H. Moghaddam</title>
   <link rel="stylesheet" href="../assets/css/style.css"/>
   <style>
-    /* Light layout helpers compatible with your existing CSS */
-    .afk-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
-    .afk-card { background: #fff; border-radius: 12px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
-    .afk-card figure { margin: 0 0 10px 0; }
-    .afk-card img { width: 100%; height: auto; border-radius: 8px; display: block; }
-    .afk-note { font-size: 0.95rem; opacity: 0.9; }
+    /* Alternating rows layout */
+    .afk-wrap { display: grid; gap: 24px; }
+    .afk-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      align-items: center;
+    }
+    .afk-row.reverse { direction: rtl; }
+    .afk-row.reverse > * { direction: ltr; } /* keep text direction normal */
+    .afk-media img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      display: block;
+    }
+    .afk-text h3 { margin-bottom: 8px; }
+    .afk-text p { margin-bottom: 0; line-height: 1.7; }
+    .afk-note { font-size: 0.95rem; opacity: 0.9; margin-top: 8px; }
     @media (prefers-color-scheme: dark) {
-      .afk-card { background: #161616; color: #eee; box-shadow: none; border: 1px solid #2b2b2b; }
+      .afk-note { color: #ccc; }
+    }
+    @media (max-width: 900px) {
+      .afk-row, .afk-row.reverse {
+        grid-template-columns: 1fr;
+        direction: ltr;
+      }
     }
   </style>
 </head>
 <body>
+  <!-- Sidebar for /pages/ (note the ../ in image + ../index link) -->
   <aside class="sidebar">
     <img src="../assets/images/myprofile.png" alt="Profile Picture" class="profile-pic">
     <h1>Samaneh H. Moghaddam</h1>
@@ -43,33 +63,53 @@
       <h2>Away From the Keyboard (AFK)</h2>
       <p class="afk-note">When the models are training, I’m probably doing one of these…</p>
 
-      <div class="afk-grid">
-        <div class="afk-card">
-          <figure>
-            <img src="../assets/images/afk/boardgames.jpg" alt="Board games with family and friends">
-            <figcaption>Board games with family & friends</figcaption>
-          </figure>
-          <p>I’m a little addicted—in the healthy, strategy-brain way. From co-ops to crunchy Euros, I love the mix of logic, table talk, and lightweight chaos.</p>
-        </div>
-
-        <div class="afk-card">
-          <figure>
+      <div class="afk-wrap">
+        <!-- Row 1: Image Left, Text Right -->
+        <div class="afk-row">
+          <div class="afk-media">
             <img src="../assets/images/afk/vacation.jpg" alt="Vacation moments">
-            <figcaption>Vacations</figcaption>
-          </figure>
-          <p>Exploring new places, food, and stories—usually with a camera in hand. I recharge best when curiosity sets the itinerary.</p>
+          </div>
+          <div class="afk-text">
+            <h3>Vacations</h3>
+            <p>Exploring new places, food, and stories—usually with a camera in hand. I recharge best when curiosity sets the itinerary, wandering from quiet paths to busy markets and collecting tiny, memorable details along the way.</p>
+          </div>
         </div>
 
-        <div class="afk-card">
-          <figure>
-            <img src="../assets/images/afk/cycling.jpg" alt="Cycling">
-            <figcaption>Cycling</figcaption>
-          </figure>
-          <p>Two wheels, clear head. It’s my favorite way to get unstuck on a tricky idea and enjoy the ride between thoughts.</p>
+        <!-- Row 2: Text Left, Image Right -->
+        <div class="afk-row reverse">
+          <div class="afk-media">
+            <img src="../assets/images/afk/boardgames.jpg" alt="Board games with family and friends">
+          </div>
+          <div class="afk-text">
+            <h3>Board Games</h3>
+            <p>I’m a little addicted—in the healthy, strategy-brain way. From co-ops to crunchy Euros, I love the mix of logic, table talk, and lightweight chaos with family and friends. Best kind of debugging is when it happens over cardboard.</p>
+          </div>
+        </div>
+
+        <!-- Row 3: Image Left, Text Right -->
+        <div class="afk-row">
+          <div class="afk-media">
+            <img src="../assets/images/afk/cycling.jpg" alt="Cycling outdoors">
+          </div>
+          <div class="afk-text">
+            <h3>Cycling</h3>
+            <p>Two wheels, clear head. It’s my favorite way to get unstuck on a tricky idea and enjoy the ride between thoughts. Long stretches, steady cadence, and the occasional race against a sunset—perfect.</p>
+          </div>
+        </div>
+
+        <!-- Row 4: Text Left, Image Right -->
+        <div class="afk-row reverse">
+          <div class="afk-media">
+            <img src="../assets/images/afk/cooking.jpg" alt="Cooking new recipes">
+          </div>
+          <div class="afk-text">
+            <h3>Cooking New Recipes</h3>
+            <p>Creative, experimental, slightly improvisational—just like a good research sprint. I love testing new recipes and tweaking spices until the flavors click. Dinner is my favorite mini-project with instant feedback.</p>
+          </div>
         </div>
       </div>
 
-      <p class="afk-note" style="margin-top:12px;">I’ll keep adding photos as I go—small snapshots of life beyond GPUs and gradients.</p>
+      <p class="afk-note">Photos are placeholders—drop your own into <code>assets/images/afk/</code> with the same filenames.</p>
     </section>
   </main>
 
